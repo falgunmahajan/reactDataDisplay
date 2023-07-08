@@ -6,9 +6,9 @@ console.log(data)
 function App() {
   let[showData,setShowData]=useState(data)
   let renderedData=showData?showData.map((item,index)=>{
-    return<> <div key={index}>
+    return<> <div>
       {Object.keys(item).map(key=>
-       <p key={key}>{key} : {item[key]}</p>
+       <p>{key} : {item[key]}</p>
         )}
     </div><br/></>
 }):<h3 className='text-center'>All Data are cleared</h3>
